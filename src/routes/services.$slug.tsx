@@ -54,11 +54,11 @@ function ServiceDetail() {
 
       <section className="bg-background py-24">
         <div className="mx-auto max-w-4xl space-y-10 px-4 sm:px-6 lg:px-8">
-          {detail.sections.map((sec) => (
+          {detail.sections.map((sec: { heading: string; points: string[] }) => (
             <div key={sec.heading} className="rounded-2xl border border-border bg-card p-8 shadow-card">
               <h2 className="font-display text-2xl text-navy">{sec.heading}</h2>
               <ul className="mt-6 grid gap-3 sm:grid-cols-2">
-                {sec.points.map((p) => (
+                {sec.points.map((p: string) => (
                   <li key={p} className="flex items-start gap-2 text-sm">
                     <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
                     <span className="text-navy">{p}</span>
